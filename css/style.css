@@ -814,6 +814,33 @@ footer {
 .fade-up:nth-child(3) { animation-delay: 0.3s; }
 .fade-up:nth-child(4) { animation-delay: 0.4s; }
 
+.marquee {
+			border: 2px var(--bg2) ;
+			display: flex ;
+			overflow: hidden ;
+			white-space: nowrap ;
+			width: 300px ;
+}
+.marquee__item {
+			animation-duration: 4s ;
+			animation-iteration-count: infinite ;
+			animation-name: marquee-content ;
+			animation-timing-function: linear ;
+			padding: 5px 15px 5px 15px ;
+}
+.marquee:hover .marquee__item {
+			animation-play-state: paused ;
+}
+
+@keyframes marquee-content {
+			from {
+				transform: translateX( 0% );
+			}
+			to {
+				transform: translateX( -100% );
+			}
+		}
+
 /* ── INLINE UTILS ── */
 .mt-1 { margin-top: 0.5rem; }
 .mt-2 { margin-top: 1rem; }
@@ -824,3 +851,87 @@ footer {
 .text-accent { color: var(--accent); }
 .text-muted { color: var(--muted); }
 .mono { font-family: var(--mono); }
+
+/* ── Sponsor carousel ───────────────────────────────────── */
+.carousel-outer {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg2);
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.carousel-outer::before,
+.carousel-outer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.carousel-outer::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg2), transparent);
+}
+.carousel-outer::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg2), transparent);
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+/* Pause on hover */
+.carousel-outer:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.sponsor-item {
+  flex-shrink: 0;
+}
+
+.sponsor-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.sponsor-item img {
+  height: 48px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.45;
+  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sponsor-item a:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.sponsor-name {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
