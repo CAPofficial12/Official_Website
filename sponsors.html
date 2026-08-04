@@ -64,11 +64,75 @@
 
   <div class="divider"></div>
 
+  <!-- PHOTO GALLERY -->
+  <!--
+    Each .gallery-item below is a placeholder box. To drop in a real photo,
+    delete the inner <div class="gallery-placeholder">...</div> and replace it
+    with an <img> tag, e.g.:
+      <img src="Photos/outreach-showcase.jpg" alt="Students demoing the robot at a school showcase">
+    Suggested filenames to add under a new /Photos folder are noted in each comment below.
+  -->
+  <section class="section">
+    <p class="section-label">See us in action</p>
+    <h2 class="section-title">More than a <strong>pitch deck.</strong></h2>
+    <p class="section-body">A look at the robot, the build process, and the outreach work sponsorship makes possible.</p>
+
+    <div class="gallery-grid observe-fade">
+
+      <!-- Suggested file: Photos/outreach-showcase.jpg -->
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <img src="Logos/Robot Clinic Photo 1.png" alt="Robot Clinic" width="60" height="60">
+        </div>
+        <div class="gallery-caption"> <br><br> Outreach — Robot Clinic (50+ attendees, 100+ observers)</div>
+      </div>
+
+      <!-- Suggested file: Photos/outreach-robot-doctor.jpg -->
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <img src="Logos/Robot Showcase Photo 1.png" alt="Robot Showcase" width="10" height="10">
+        </div>
+        <div class="gallery-caption">Outreach — Robot Showcase (80+ attendees, 250+ observers)</div>
+      </div>
+
+      <!-- Suggested file: Photos/the-robot.jpg -->
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <img src="Logos/Robot Photo 1.png" alt="HBKU" width="60" height="36">
+        </div>
+        <div class="gallery-caption">The Robot</div>
+      </div>
+
+      <!-- Suggested file: Photos/team-at-work.jpg -->
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <img src="Logos/Team Robot Photo 1.png" alt="HBKU" width="60" height="36">
+        </div>
+        <div class="gallery-caption">Team at Work</div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
   <!-- TIERS -->
   <section class="section">
     <p class="section-label">Sponsorship tiers</p>
     <h2 class="section-title">Find the right <strong>partnership level.</strong></h2>
     <p class="section-body">All figures in USD. In-kind contributions (hardware, manufacturing, mentorship) are accepted and mapped to the equivalent tier.</p>
+
+    <!--
+      Prospectus link: replace the href below with the actual path once the PDF
+      is added to the repo, e.g. documents/RTE_Robotics_Sponsorship_Prospectus.pdf
+    -->
+    <div class="mt-4" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:1.25rem 1.5rem;background:var(--bg2);border:1px solid var(--border2);border-radius:6px">
+      <div>
+        <div class="card-label" style="margin-bottom:0.35rem">Full details</div>
+        <div style="font-size:15px;color:var(--text)">Get the complete Sponsorship Prospectus — tiers, deliverables, and season plan in one PDF.</div>
+      </div>
+      <a href="Logos/Sponsorship Prospects.pdf" class="btn-primary" target="_blank" rel="noopener" style="white-space:nowrap">Download Prospectus (PDF) &rarr;</a>
+    </div>
 
     <div class="tier-grid observe-fade">
 
@@ -118,13 +182,38 @@
         <ul class="tier-benefits">
           <li>All Megabyte benefits</li>
           <li>Primary branding placement across all team assets</li>
-          <li>Co-authored press release at season start</li>
-          <li>Direct and Priority team access throughout year</li>
+          <li>Direct team access throughout year</li>
           <li>Quarterly technical & impact reports</li>
-          <li>Primary placement on all distrubuted materials</li>
-          <li>Invitation to private engineering showcases / demo events</li>
-          <li>Co-branded outreach initiatives</li>
           <li>Priority consideration for long-term multi-season partnership agreements</li>
+        </ul>
+        <a href="contact.html" class="btn-secondary" style="display:block;text-align:center;margin-top:1.5rem">Enquire &rarr;</a>
+      </div>
+
+      <div class="tier-card" style="border-color:rgba(0,229,255,0.3)">
+        <div class="tier-name">TeraByte: Innovation Sponsor</div>
+        <div class="tier-price">$5,000+ <span>/season</span></div>
+        <ul class="tier-benefits">
+          <li>All Gigabyte benefits</li>
+          <li>Subsystem naming rights</li>
+          <li>Pit Banner Dominance</li>
+          <li>Employee Engagement "Lunch and Learn"</li>
+          <li>Co-Authored press release at season start (joint branding + outreach)</li>
+          <li>Co-Hosted STEM Outreach Event</li>
+        </ul>
+        <a href="contact.html" class="btn-secondary" style="display:block;text-align:center;margin-top:1.5rem">Enquire &rarr;</a>
+      </div>
+
+      <div class="tier-card" style="border-color:rgba(0,229,255,0.3)">
+        <div class="tier-name">PetaByte: Exclusive Title Sponsor</div>
+        <div class="tier-price">$8,000+ <span>/ season</span></div>
+        <ul class="tier-benefits">
+          <li>All Terabyte benefits</li>
+          <li>Exclusive "RTE Robotics - presented by ..." naming rights</li>
+          <li>Live Office Robot Demo and Explanation</li>
+          <li>Direct and Priority team access throughout year</li>
+          <li>Dedicated Sponsor Spotlight Video</li>
+          <li>YouTube Build Series Feature</li>
+          <li>Social Media Takeover (sponsor will be mentioned in every Social Media post)</li>
         </ul>
         <a href="contact.html" class="btn-secondary" style="display:block;text-align:center;margin-top:1.5rem">Enquire &rarr;</a>
       </div>
@@ -133,7 +222,7 @@
 
     <div style="margin-top:1.5rem;padding:1.25rem;background:var(--bg2);border:1px solid var(--border);border-radius:6px">
       <p style="font-size:13px;color:var(--muted)">
-        All sponsorship funds go directly toward robot components, competition registration, and programme operating costs. Financial statements are available on request. In-kind contributions — hardware, manufacturing time, engineering mentorship — are welcomed and matched to an equivalent tier.
+        All sponsorship funds go directly toward robot components, competition registration, and programme operating costs. Financial statements are available on request. In-kind contributions — hardware, manufacturing time, engineering mentorship — are welcomed and matched to an equivalent tier. Custom Arrangments are avaiable on request.
       </p>
     </div>
   </section>
@@ -177,8 +266,6 @@
 
   <!-- CURRENT PARTNERS -->
   <section class="section">
-    <p class="section-label">Current partners</p>
-    <h2 class="section-title">Our institutional <strong>supporters.</strong></h2>
     <p class="section-label">Our partners</p>
     <h2 class="section-title">Institutional <strong>support</strong></h2>
     <p class="section-body mb-4">
